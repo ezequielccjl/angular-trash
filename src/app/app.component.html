@@ -142,6 +142,37 @@
       </div>
     </div>
   </section>
+  <section>
+    <h2>ahora voy a probar hacer un formulario</h2>
+    <form (ngSubmit)="meRegistroPa()" #myForm="ngForm">
+      <div class="input-group">
+        <label for="name">Nombre</label>
+        <input type="text" required id="name" name="name" [(ngModel)]="register.name" >
+      <p class="message-error" [class.pepe]="myForm.invalid">flaquito escribite algo</p>
+      </div>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="text" required id="email" name="email" [(ngModel)]="register.email" >
+      <p class="message-error" [class.pepe]="myForm.invalid">flaquito escribite algo</p>
+      
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" required id="password" name="password" #inputPass="ngModel" [(ngModel)]="register.password" >
+      <p class="message-error" [class.pepe]="inputPass.invalid">flaquito escribite algo</p>
+      </div>
+      <button [disabled]="myForm.invalid" type="submit">Registrar</button>
+      <button type="button">Accion</button>
+    </form>
+  </section>
 
+  <div class="webflow-style-input">
+    <input class="blablabla" type="email" placeholder="What's your email?">
+    <button type="submit"><i class="icon ion-android-arrow-forward"></i></button>
+  </div>
+
+  <!-- COMPONENTE CREADO CON "ng g c nombre-componente" -->
+  <input type="text" [(ngModel)]="detalleParent">
+  <app-item-detail [props]="detalleParent" ></app-item-detail>
 
 <router-outlet></router-outlet>

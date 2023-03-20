@@ -8,11 +8,11 @@ import { IPerritos } from './perritos.model';
 })
 export class AppComponent {
   title = 'my-store';
-  name='De: Ezequiel'
-  type='password'
-  textoInput ='null'
+  name = 'De: Ezequiel'
+  type = 'password'
+  textoInput = 'null'
   btnDisabled = false
-  mascota= {
+  mascota = {
     nombre: 'Pelu',
     tipo: 'Gato',
     patas: 4
@@ -40,15 +40,23 @@ export class AppComponent {
     }
   ]
   textoBtnDisabled() {
-    if(this.btnDisabled){
+    if (this.btnDisabled) {
       return ':('
-    }else{
+    } else {
       return ':D'
     }
-  } 
-
-  toggleButton(){
-    this.btnDisabled = !this.btnDisabled
   }
 
+  toggleButton() {
+    this.btnDisabled = !this.btnDisabled
+  }
+  register = {
+    name: '',
+    email: '',
+    password: ''
+  }
+  meRegistroPa() {
+    alert('asdasd')
+  }
+  detalleParent = ''
 }

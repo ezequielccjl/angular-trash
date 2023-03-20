@@ -1,4 +1,6 @@
-.CENTRO{
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap');
+
+.CENTRO {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,24 +9,24 @@
     padding: 5rem 0 5rem 0;
 }
 
-.perritos-section{
+.perritos-section {
     padding: 0 15% 0 15%;
 }
 
-.container-perritos{
+.container-perritos {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px
 }
 
-.card-perrito{
+.card-perrito {
     height: 40vh;
     border-radius: 20px;
     padding: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.cont-img-card{
+.cont-img-card {
     border-radius: 20px;
     background-color: red;
     height: 70%;
@@ -32,7 +34,7 @@
     align-items: center;
 }
 
-.card-perrito img{
+.card-perrito img {
     position: relative;
     width: 100%;
     height: 100%;
@@ -40,13 +42,98 @@
     border-radius: 20px;
 }
 
-.message-error{
+.message-error {
     background-color: red;
     color: white;
     opacity: 0;
     transition: ease-in-out .5s;
-    &.pepe{
+
+    &.pepe {
         opacity: 1;
 
+    }
+}
+
+form {
+    font-family: 'Chivo', sans-serif;
+}
+
+/* ESTO ME LO COPIE DE INTERNET */
+
+.blablabla {
+    border-style: none;
+    background: transparent;
+    outline: none;
+}
+
+// gradient animation
+@keyframes gradient {
+    0% {
+        background-position: 0 0
+    }
+
+    100% {
+        background-position: 100% 0
+    }
+}
+
+// colors
+$input-background: rgba(57, 63, 84, 0.8);
+$input-text-inactive: #7881A1;
+$input-text-active: #BFD2FF;
+
+.webflow-style-input {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 2px;
+    padding: 1.4rem 2rem 1.6rem;
+    background: $input-background;
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        z-index: 999;
+        height: 2px;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+        background-position: 0% 0%;
+        background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
+        background-size: 500% auto;
+        animation: gradient 3s linear infinite;
+    }
+}
+
+.webflow-style-input input {
+    flex-grow: 1;
+    color: $input-text-active;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    vertical-align: middle;
+
+    &::-webkit-input-placeholder {
+        color: $input-text-inactive;
+    }
+}
+
+.webflow-style-input button {
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+    color: $input-text-inactive;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    vertical-align: middle;
+    transition: color .25s;
+
+    &:hover {
+        color: $input-text-active;
     }
 }
