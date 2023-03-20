@@ -1,0 +1,52 @@
+.CENTRO{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 60px;
+    padding: 5rem 0 5rem 0;
+}
+
+.perritos-section{
+    padding: 0 15% 0 15%;
+}
+
+.container-perritos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px
+}
+
+.card-perrito{
+    height: 40vh;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cont-img-card{
+    border-radius: 20px;
+    background-color: red;
+    height: 70%;
+    display: flex;
+    align-items: center;
+}
+
+.card-perrito img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.message-error{
+    background-color: red;
+    color: white;
+    opacity: 0;
+    transition: ease-in-out .5s;
+    &.pepe{
+        opacity: 1;
+
+    }
+}
